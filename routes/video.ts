@@ -16,8 +16,8 @@ router.post("/script", authenticateJwt, async (req, res) => {
   const time = 300;
   const promptGen = `generate a nice script from this ${prompt} like  a person have to explain all this in youtube video and generate content for ${time} seconds `;
 
-  const process.env.apikey = "AIzaSyCwdyAD8Lz08sqcL3rwCv1VRLNAViszcgc";
-  const genAI = new GoogleGenerativeAI(process.env.apikey);
+  const apikey = "AIzaSyCwdyAD8Lz08sqcL3rwCv1VRLNAViszcgc";
+  const genAI = new GoogleGenerativeAI(apikey);
   async function run() {
     // For text-only input, use the gemini-pro model
     const model = genAI.getGenerativeModel({ model: "gemini-pro" });
@@ -29,8 +29,8 @@ router.post("/script", authenticateJwt, async (req, res) => {
     const text = response.text();
 
     /// OPEN AI PART
-    const process.env.apikey = "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";
-    const openai = new OpenAI({ process.env.apikey });
+    const apikey = "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";
+    const openai = new OpenAI({ apikey });
 
     const speechFile = path.resolve("./speech.mp3");
 

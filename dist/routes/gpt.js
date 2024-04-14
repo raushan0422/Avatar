@@ -22,8 +22,8 @@ router.post("/tweet", index_1.authenticateJwt, (req, res) => __awaiter(void 0, v
     //console.log(journal);
     const search = journal;
     const promptGen = `convert  this ${search} in twitter post  which should have less than 200  character`;
-    const process.env.apikey = "AIzaSyCwdyAD8Lz08sqcL3rwCv1VRLNAViszcgc";
-    const genAI = new generative_ai_1.GoogleGenerativeAI(process.env.apikey);
+    const apikey = "AIzaSyCwdyAD8Lz08sqcL3rwCv1VRLNAViszcgc";
+    const genAI = new generative_ai_1.GoogleGenerativeAI(apikey);
     function run() {
         return __awaiter(this, void 0, void 0, function* () {
             // For text-only input, use the gemini-pro model
@@ -45,9 +45,9 @@ router.post("/linkedin", index_1.authenticateJwt, (req, res) => __awaiter(void 0
     // Prompt Gen
     const promptGen = `convert  this ${search} in linkedin post  which should have less than 1000  character and more than 800 character`;
     // API_KEY
-    const process.env.apikey = "AIzaSyCwdyAD8Lz08sqcL3rwCv1VRLNAViszcgc";
+    const apikey = "AIzaSyCwdyAD8Lz08sqcL3rwCv1VRLNAViszcgc";
     // GEN AI
-    const genAI = new generative_ai_1.GoogleGenerativeAI(process.env.apikey);
+    const genAI = new generative_ai_1.GoogleGenerativeAI(apikey);
     function run() {
         return __awaiter(this, void 0, void 0, function* () {
             // For text-only input, use the gemini-pro model
@@ -68,7 +68,7 @@ router.post("/facebook", index_1.authenticateJwt, (req, res) => __awaiter(void 0
     console.log(journal);
     const search = journal;
     const openai = new openai_1.OpenAI({
-        process.env.apikey: process.env.OPENAI_API_KEY,
+        apikey: process.env.OPENAI_API_KEY,
     });
     const response = yield openai.chat.completions.create({
         model: "gpt-3.5-turbo",
@@ -93,7 +93,7 @@ router.post("/youtube", index_1.authenticateJwt, (req, res) => __awaiter(void 0,
     console.log(journal);
     const search = journal;
     const openai = new openai_1.OpenAI({
-        process.env.apikey: process.env.OPENAI_API_KEY,
+        apikey: process.env.OPENAI_API_KEY,
     });
     const response = yield openai.chat.completions.create({
         model: "gpt-3.5-turbo",
@@ -118,8 +118,8 @@ router.post("/medium", index_1.authenticateJwt, (req, res) => __awaiter(void 0, 
     //console.log(journal);
     const search = journal;
     const promptGen = `convert  this ${search} in medium post  which should have less than 10000  character and greater than 6000 character`;
-    const process.env.apikey = "AIzaSyCwdyAD8Lz08sqcL3rwCv1VRLNAViszcgc";
-    const genAI = new generative_ai_1.GoogleGenerativeAI(process.env.apikey);
+    const apikey = "AIzaSyCwdyAD8Lz08sqcL3rwCv1VRLNAViszcgc";
+    const genAI = new generative_ai_1.GoogleGenerativeAI(apikey);
     function run() {
         return __awaiter(this, void 0, void 0, function* () {
             // For text-only input, use the gemini-pro model
@@ -138,7 +138,7 @@ router.post("/medium", index_1.authenticateJwt, (req, res) => __awaiter(void 0, 
     console.log(journal);
     const search = journal;
     const openai = new OpenAI({
-      process.env.apikey: process.env.OPENAI_API_KEY,
+      apikey: process.env.OPENAI_API_KEY,
     });
     const response = await openai.chat.completions.create({
       model: "gpt-3.5-turbo",
@@ -163,7 +163,7 @@ router.post("/dev", index_1.authenticateJwt, (req, res) => __awaiter(void 0, voi
     console.log(journal);
     const search = journal;
     const openai = new openai_1.OpenAI({
-        process.env.apikey: process.env.OPENAI_API_KEY,
+        apikey: process.env.OPENAI_API_KEY,
     });
     const response = yield openai.chat.completions.create({
         model: "gpt-3.5-turbo",
@@ -188,8 +188,8 @@ router.post("/hashnode", index_1.authenticateJwt, (req, res) => __awaiter(void 0
     //console.log(journal);
     const search = journal;
     const promptGen = `convert  this ${search} in hashnode  blog  which should have less than 10000  character and greater than 6000 character`;
-    const process.env.apikey = "AIzaSyCwdyAD8Lz08sqcL3rwCv1VRLNAViszcgc";
-    const genAI = new generative_ai_1.GoogleGenerativeAI(process.env.apikey);
+    const apikey = "AIzaSyCwdyAD8Lz08sqcL3rwCv1VRLNAViszcgc";
+    const genAI = new generative_ai_1.GoogleGenerativeAI(apikey);
     function run() {
         return __awaiter(this, void 0, void 0, function* () {
             // For text-only input, use the gemini-pro model
@@ -209,7 +209,7 @@ router.post("/hashnode", index_1.authenticateJwt, (req, res) => __awaiter(void 0
       console.log(journal);
       const search = journal;
       const openai = new OpenAI({
-        process.env.apikey: process.env.OPENAI_API_KEY,
+        apikey: process.env.OPENAI_API_KEY,
       });
       const response = await openai.chat.completions.create({
         model: "gpt-3.5-turbo",
@@ -235,7 +235,7 @@ router.post("/quora", index_1.authenticateJwt, (req, res) => __awaiter(void 0, v
     console.log(journal);
     const search = journal;
     const openai = new openai_1.OpenAI({
-        process.env.apikey: process.env.OPENAI_API_KEY,
+        apikey: process.env.OPENAI_API_KEY,
     });
     const response = yield openai.chat.completions.create({
         model: "gpt-3.5-turbo",
@@ -260,7 +260,7 @@ router.post("/reddit", index_1.authenticateJwt, (req, res) => __awaiter(void 0, 
     console.log(journal);
     const search = journal;
     const openai = new openai_1.OpenAI({
-        process.env.apikey: process.env.OPENAI_API_KEY,
+        apikey: process.env.OPENAI_API_KEY,
     });
     const response = yield openai.chat.completions.create({
         model: "gpt-3.5-turbo",
@@ -285,7 +285,7 @@ router.post("/email", index_1.authenticateJwt, (req, res) => __awaiter(void 0, v
     console.log(journal);
     const search = journal;
     const openai = new openai_1.OpenAI({
-        process.env.apikey: process.env.OPENAI_API_KEY,
+        apikey: process.env.OPENAI_API_KEY,
     });
     const response = yield openai.chat.completions.create({
         model: "gpt-3.5-turbo",

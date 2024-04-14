@@ -129,11 +129,11 @@ router.post("/api/save-tokens", async (req, res) => {
 
 // Helper function to save tokens for a specific platform
 async function saveTokens(platform: Platform, tokens: string[]) {
-  const [process.env.apikey, apiSecret, accessToken, accessSecret] = tokens;
+  const [apikey, apiSecret, accessToken, accessSecret] = tokens;
 
   const newToken = new TokenModel({
     platform,
-    process.env.apikey,
+    apikey,
     apiSecret,
     accessToken,
     accessSecret,

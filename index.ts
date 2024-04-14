@@ -5,14 +5,13 @@ import todoRoutes from "./routes/todo";
 import gptRoutes from "./routes/gpt";
 import videoRoutes from "./routes/video";
 //import postRoutes from "./routes/post";
-
-require('dotenv').config()
-
-
+import dotenv from "dotenv";
+dotenv.config();
 
 import cors from "cors";
 const app = express();
 const port = 3000;
+
 app.use(cors());
 app.use(express.json());
 app.use("/auth", authRoutes);

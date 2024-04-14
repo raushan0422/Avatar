@@ -21,7 +21,7 @@ const historySchema = new mongoose_1.default.Schema({
 });
 const TokenSchema = new mongoose_1.default.Schema({
     platform: String,
-    process.env.apikey: String,
+    apiKey: String,
     apiSecret: String,
     accessToken: String,
     accessSecret: String,

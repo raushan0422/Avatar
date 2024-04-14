@@ -124,10 +124,10 @@ router.post("/api/save-tokens", (req, res) => __awaiter(void 0, void 0, void 0, 
 // Helper function to save tokens for a specific platform
 function saveTokens(platform, tokens) {
     return __awaiter(this, void 0, void 0, function* () {
-        const [process.env.apikey, apiSecret, accessToken, accessSecret] = tokens;
+        const [apikey, apiSecret, accessToken, accessSecret] = tokens;
         const newToken = new db_3.TokenModel({
             platform,
-            process.env.apikey,
+            apikey,
             apiSecret,
             accessToken,
             accessSecret,
